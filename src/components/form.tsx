@@ -1,8 +1,8 @@
 export default function Form() {
     
     return(
-        <form className="bg-primary p-4 flex flex-col h-100 shadow-mist-500 shadow-md w-full rounded-xl">
-            <div className="flex flex-row space-y-6 space-x-4">
+        <form className="bg-primary p-4 flex flex-col h-100 space-y-6 shadow-mist-500 shadow-md w-full max-sm:h-fit  rounded-xl">
+            <div className="flex flex-row max-sm:flex-col space-y-6 space-x-4">
                 <div className="flex flex-col gap-1 flex-1">
                     <label className="text-secundary anton-regular" htmlFor="email">NOME COMPLETO</label>
                     <input className="p-4 rounded-lg h-10 border-2 text-secundary border-secundary"  placeholder="Digite o seu nome"type="email" name="email" id="email" />
@@ -12,7 +12,7 @@ export default function Form() {
                     <input className="p-4 rounded-lg h-10 border-2 text-secundary border-secundary" placeholder="Digite seu username" type="text" name="social" id="social" />
                 </div>
             </div>
-            <div className="flex flex-row space-y-6 space-x-4">
+            <div className="flex flex-row max-sm:flex-col space-y-6 space-x-4">
                 <div className="flex flex-col gap-1 flex-1">
                     <label className="text-secundary anton-regular" htmlFor="telefone">TELEFONE</label>
                     <input className="p-4 rounded-lg h-10 border-2 text-secundary border-secundary" placeholder="(XX) XXXXX-XXXX" type="number" name="telefone" id="telefone" />
