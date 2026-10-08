@@ -1,11 +1,13 @@
 import "./App.css"
-import Project from "./sections/project"
+import Portifolio from "./sections/portifolio"
 import Contact from "./sections/contact"
+import About from "./sections/about"
 
 function App() {
   return (
     <>
-    <Project/>
+    <Portifolio/>
+    <About/>
     <Contact/>
     
     </>

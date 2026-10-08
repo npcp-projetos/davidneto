@@ -21,6 +21,10 @@ body {
   font-style: normal;
 }
 
+.inter-regular {
+  font-family: Inter;
+}
+
 .titan-regular {
   font-family: "Titan One", sans-serif;
   font-weight: 400;
