@@ -1,12 +1,12 @@
-import "./index.css"
+import Navbar from './assets/components/Navbar'
+import Hero from './assets/components/Hero'
 
 function App() {
-
   return (
-    <>
-      <h1 className="">david neto</h1>
-
-    </>
+    <div className="min-h-screen bg-off-white">
+      <Navbar />
+      <Hero />
+    </div>
   )
 }
 
