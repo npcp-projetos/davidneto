@@ -7,9 +7,9 @@ export default function Footer(){
 
 
     return(
-        <section className="w-full h-50 bg-primary flex items-center justify-evenly content-evenly">
-            <img className="w-40" src="public\logo.png" alt="Logo"></img>
-            <div>
+        <section className="w-full h-50  max-sm:h-70 bg-primary flex max-sm:flex-wrap max-sm:space-y-4 items-center justify-evenly content-evenly">
+            <img className="w-40  max-sm:order-3" src="public\logo.png" alt="Logo"></img>
+            <div className="max-sm:basis-1/3">
                 <p className="text-terciary titan-one-regular">LINKS RÁPIDOS</p>
                 <ul className="text-secundary mt-2text-sm anton-regular">
                     <li><a href="#">Sobre mim</a></li>
@@ -17,7 +17,7 @@ export default function Footer(){
                     <li><a href="#">Como funciona</a></li>
                 </ul>
             </div>
-            <div>
+            <div className="max-sm:basis-1/3">
                 <p className="text-terciary titan-one-regular">REDES SOCIAIS</p>
                 <div className="flex flex-row gap-4 mt-2">
                     <BotaoIcone>

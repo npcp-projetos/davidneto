@@ -1,9 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+body {
+  	margin: 0; line-height: normal;
+}
+
+
 @import "tailwindcss";
 
 
 @theme inline{
-
     --color-primary: #684033;
     --color-secundary: #F3EEE1;
     --color-terciary: #F88AC1;
@@ -14,14 +20,13 @@
   font-weight: 400;
   font-style: normal;
 }
-.titan-one-regular {
-  font-family: "Titan One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
 .inter-regular {
-  font-family: "Inter", sans-serif;
+  font-family: Inter;
+}
+
+.titan-regular {
+  font-family: "Titan One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }

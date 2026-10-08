@@ -1,12 +1,15 @@
 import "./App.css"
-import Contact from "./sections/contact.tsx"
-import Footer from "./sections/footer.tsx"
+import Portifolio from "./sections/portifolio"
+import Contact from "./sections/contact"
+import About from "./sections/about"
 
 function App() {
   return (
     <>
+    <Portifolio/>
+    <About/>
     <Contact/>
-    <Footer/>
+    
     </>
   )
 }
