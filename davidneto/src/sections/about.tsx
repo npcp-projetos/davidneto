@@ -60,7 +60,7 @@ export default function ProcessAndTestimonials() {
       <section className="relative w-full bg-primary py-24 px-8 md:px-24 flex justify-center">
         
         {/* Efeito de papel rasgado separando as sessões */}
-        <div className="absolute top-0 left-0 w-full h-8 bg-primary -translate-y-full rotate-180 mask-edge z-10" />
+        <div className="absolute top-0 left-0 w-full h-8 bg-secundary -translate-y-full rotate-180 mask-edge z-10" />
 
         <div className="w-full max-w-6xl flex flex-col gap-12">
           
@@ -71,7 +71,7 @@ export default function ProcessAndTestimonials() {
                 O que falam <br/> 
                 <span className="text-terciary">sobre o trabalho</span>
               </h2>
-              <p className="text-secondary text-lg">Resultados que falam mais que palavras.</p>
+              <p className="text-secundary text-lg">Resultados que falam mais que palavras.</p>
             </div>
             
             <div className="relative">
@@ -86,6 +86,7 @@ export default function ProcessAndTestimonials() {
 
           {/* Grid de Cartões */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+            
             <TestimonialCard 
               quote="Desde que eu comecei a trabalhar com David, meus vídeos evoluíram muito."
               author="Caio Morelli"

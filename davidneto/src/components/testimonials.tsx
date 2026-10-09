@@ -8,7 +8,7 @@ interface TestimonialCardProps {
 
 export default function TestimonialCard({ quote, author, role }: TestimonialCardProps) {
   return (
-    <div className="bg-secondary p-6 rounded-xl shadow-lg flex flex-col justify-between min-h-62.5">
+    <div className="bg-secundary p-6 rounded-xl shadow-lg flex flex-col justify-between min-h-62.5">
       <div>
         {/* Estrelas */}
         <div className="flex gap-1 mb-4 text-terciary text-xl">

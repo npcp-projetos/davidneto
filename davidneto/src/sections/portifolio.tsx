@@ -60,7 +60,6 @@ export default function Portifolio() {
             </Carousel>
         </div>
         
-
       </div>
     </section>
   );
