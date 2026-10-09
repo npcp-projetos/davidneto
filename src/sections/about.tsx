@@ -71,7 +71,7 @@ export default function ProcessAndTestimonials() {
                 O que falam <br/> 
                 <span className="text-terciary">sobre o trabalho</span>
               </h2>
-              <p className="text-secondary text-lg">Resultados que falam mais que palavras.</p>
+              <p className="text-secundary text-lg">Resultados que falam mais que palavras.</p>
             </div>
             
             <div className="relative">
