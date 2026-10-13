@@ -20,7 +20,7 @@ export default function TimelineStep({ number, titleTop, titleBottom, descriptio
       {/* Caixa de Título: Fundo marrom com cantos um pouco mais arredondados */}
       <div className="bg-primary flex flex-col justify-center items-center py-2 px-1 rounded-md w-full mb-3 shadow-md min-h-15">
         {/* Texto superior em creme */}
-        <span className="text-secondary uppercase font-black text-[11px] md:text-xs leading-tight tracking-wide">
+        <span className="text-secundary uppercase font-black text-[11px] md:text-xs leading-tight tracking-wide">
           {titleTop}
         </span>
         {/* Texto inferior em rosa */}
