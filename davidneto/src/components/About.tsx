@@ -22,8 +22,8 @@ export default function About() {
             </div>
 
             <div className="space-y-6">
-              <h2 className="font-anton text-4xl md:text-6xl uppercase tracking-wide leading-none text-brown">
-                Não entrego só <span className="text-pink">edição.</span>
+              <h2 className="font-anton text-4xl md:text-6xl uppercase tracking-wide leading-none text-brown whitespace-nowrap">
+                Não entrego só <span className="text-pink inline-block">edição.</span>
               </h2>
 
               <div className="space-y-4 text-stone-800 text-base sm:text-lg leading-relaxed font-sans">
