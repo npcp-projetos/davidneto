@@ -4,7 +4,7 @@ import { Button } from './Button';
 export default function Hero() {
   return (
     <section>
-      <div className="relative w-full min-h-[500px] flex items-center justify-start overflow-hidden shadow-lg">
+      <div className="relative w-full min-h-125 flex items-center justify-start overflow-hidden shadow-lg">
         <img 
           src={hero} 
           alt="Banner David Neto" 

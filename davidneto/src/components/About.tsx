@@ -10,19 +10,20 @@ export default function About() {
 
   return (
     <section>
-      <div className="relative w-full min-h-[500px] flex items-center justify-start overflow-hidden shadow-lg">
+      <div className="relative w-full min-h-125 flex items-center justify-start overflow-hidden shadow-lg">
         <div className="relative z-20 w-full max-w-7xl mx-auto px-4 md:px-12 py-12 space-y-16">
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="w-full h-[320px] sm:h-[400px] lg:h-[450px] bg-stone-300 rounded-sm overflow-hidden shadow-sm">
-              <img
+            <div className="w-full h-80 sm:h-100 lg:h-112.5 bg-stone-300 rounded-sm overflow-hidden shadow-sm">
+              {/* <img
+                src={aboutImage}
                 alt="David Neto"
                 className="w-full h-full object-cover"
-              />
+              /> */}
             </div>
 
             <div className="space-y-6">
-              <h2 className="font-anton text-4xl md:text-6xl uppercase tracking-wide leading-none text-brown whitespace-nowrap">
+              <h2 className="font-anton text-4xl md:text-5xl uppercase tracking-wide leading-none text-brown">
                 Não entrego só <span className="text-pink inline-block">edição.</span>
               </h2>
 

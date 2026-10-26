@@ -14,6 +14,7 @@
   --color-brown: var(--brand-brown);
   --color-pink: var(--brand-pink);
   --color-white: var(--brand-white);
+  --color-off-white: var(--brand-white);
 
   --font-titan: var(--brand-font-titan);
   --font-inter: var(--brand-font-inter);

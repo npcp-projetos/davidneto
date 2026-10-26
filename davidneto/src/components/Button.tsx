@@ -1,12 +1,12 @@
 import React from 'react';
 
-export const buttonVariants = {
+const buttonVariants = {
   primary: 'bg-pink text-white hover:bg-pink/90',
   outline: 'border border-white/60 bg-transparent text-white hover:bg-white/10',
   'outline-pink': 'border border-pink text-pink hover:bg-pink hover:text-white',
 };
 
-export const buttonSizes = {
+const buttonSizes = {
   sm: 'px-4 py-2', 
   md: 'px-6 py-2.5 text-sm', 
   lg: 'px-8 py-3.5 text-base w-full md:w-auto',
