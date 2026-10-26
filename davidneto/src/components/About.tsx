@@ -1,4 +1,5 @@
 // import aboutImage from '../assets/images/about-image.webp';
+import paperTexture from '../assets/images/efeito-papel-rasgado.png';
 
 export default function About() {
   const metrics = [
@@ -9,9 +10,16 @@ export default function About() {
   ];
 
   return (
-    <section>
-      <div className="relative w-full min-h-125 flex items-center justify-start overflow-hidden shadow-lg">
-        <div className="relative z-20 w-full max-w-7xl mx-auto px-4 md:px-12 py-12 space-y-16">
+    <section className="relative w-full bg-off-white">
+      <img
+        src={paperTexture}
+        alt=""
+        aria-hidden="true"
+        className="absolute top-0 left-0 -translate-y-1/2 w-full h-8 md:h-12 object-cover z-30 pointer-events-none select-none"
+      />
+
+      <div className="relative w-full min-h-125 flex items-center justify-start">
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-4 md:px-12 py-16 space-y-16">
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="w-full h-80 sm:h-100 lg:h-112.5 bg-stone-300 rounded-sm overflow-hidden shadow-sm">
@@ -27,7 +35,7 @@ export default function About() {
                 Não entrego só <span className="text-pink inline-block">edição.</span>
               </h2>
 
-              <div className="space-y-4 text-stone-800 text-base sm:text-lg leading-relaxed font-sans">
+              <div className="space-y-4 text-brown text-base sm:text-lg leading-relaxed font-inter font-medium">
                 <p>
                   Meu nome é
                   <strong className="text-pink font-bold"> David Neto</strong> e o
@@ -53,13 +61,13 @@ export default function About() {
             
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-6 border-t border-brown text-center">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-6 text-center">
             {metrics.map(({ value, label }) => (
               <div key={label} className="flex flex-col items-center">
-                <span className="font-anton text-4xl md:text-6xl text-pink">
+                <span className="font-anton text-4xl md:text-6xl text-pink uppercase">
                   {value}
                 </span>
-                <span className="font-anton uppercase text-stone-800 text-sm sm:text-base mt-1 leading-snug text-balance">
+                <span className="font-inter font-bold uppercase text-brown text-sm sm:text-base mt-2 leading-tight max-w-[15ch] text-balance">
                   {label}
                 </span>
               </div>
@@ -67,6 +75,15 @@ export default function About() {
           </div>
 
         </div>
+      </div>
+
+      <div className="relative w-full h-8 bg-brown">
+        <img
+          src={paperTexture}
+          alt=""
+          aria-hidden="true"
+          className="absolute top-0 left-0 -translate-y-1/2 w-full h-8 md:h-12 object-cover z-30 pointer-events-none select-none"
+        />
       </div>
     </section>
   );
