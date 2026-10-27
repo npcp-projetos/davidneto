@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --brand-brown: #684033;
+  --brand-pink: #F88AC1;
+  --brand-white: #F3EEE1;
+
+  --brand-font-titan: 'Titan One', sans-serif;
+  --brand-font-inter: 'Inter', sans-serif;
+  --brand-font-anton: 'Anton', sans-serif;
+}
+
+@theme {
+  --color-brown: var(--brand-brown);
+  --color-pink: var(--brand-pink);
+  --color-white: var(--brand-white);
+  --color-off-white: var(--brand-white);
+
+  --color-primary: var(--brand-brown);
+  --color-secundary: var(--brand-white);
+  --color-terciary: var(--brand-pink);
+
+  --font-titan: var(--brand-font-titan);
+  --font-inter: var(--brand-font-inter);
+  --font-anton: var(--brand-font-anton);
+}
+
