@@ -1,22 +1,33 @@
 // src/sections/about.tsx (ou o nome que preferir dar a esta seção)
 import TimelineStep from "../components/passos";
 import TestimonialCard from "../components/testimonials";
+import paperTexture from "../assets/images/efeito-papel-rasgado.png";
+import buttonDetail from "../assets/images/efeito-botao-depoimento.png";
 
 export default function ProcessAndTestimonials() {
   return (
     <div className="w-full flex flex-col">
       
-      {/* Fundo creme aplicado com bg-secondary */}
-      <section className="w-full bg-secundary py-20 px-8 md:px-24 flex justify-center">
-        <div className="w-full max-w-6xl flex flex-col lg:flex-row gap-12 items-start">
+      {/* Fundo creme aplicado com bg-secundary */}
+      <section className="relative w-full bg-secundary py-20 px-8 md:px-24 flex justify-center">
+        
+        {/* Efeito de papel rasgado superior separando as seções */}
+        <img
+          src={paperTexture}
+          alt=""
+          aria-hidden="true"
+          className="absolute top-0 left-0 -translate-y-1/2 w-full h-8 md:h-12 object-cover z-30 pointer-events-none select-none"
+        />
+
+        <div className="relative z-20 w-full max-w-6xl flex flex-col lg:flex-row gap-12 items-start">
           
           {/* Título da Esquerda */}
           <div className="lg:w-1/3 flex flex-col">
-            <h2 className="text-6xl font-['Anton'] uppercase leading-none mb-4 tracking-wide">
+            <h2 className="text-6xl font-anton uppercase leading-none mb-4 tracking-wide">
               <span className="text-primary block">Como</span>
               <span className="text-terciary block">Funciona</span>
             </h2>
-            <p className="text-primary text-lg md:text-xl font-medium max-w-xs">
+            <p className="text-primary font-inter text-lg md:text-xl font-bold max-w-xs">
               Simples, direto e feito para você!
             </p>
           </div>
@@ -25,7 +36,7 @@ export default function ProcessAndTestimonials() {
           <div className="lg:w-2/3 relative flex flex-col md:flex-row justify-between gap-6 md:gap-4 w-full mt-8 lg:mt-0">
             
             {/* Eixo da Timeline: Linha grossa com bordas arredondadas que passa por trás */}
-            <div className="hidden md:block absolute top-5.25 left-3.75 right-3.75 h-3 bg-terciary rounded-full z-0"></div>
+            <div className="hidden md:block absolute top-4.5 left-3.75 right-3.75 h-3 bg-terciary rounded-full z-0"></div>
 
             <TimelineStep 
               number="1" 
@@ -57,30 +68,42 @@ export default function ProcessAndTestimonials() {
 
       {/* --- PARTE 2: DEPOIMENTOS (Fundo Escuro) --- */}
       {/* O 'relative' aqui é necessário para posicionar a borda rasgada */}
-      <section className="relative w-full bg-primary py-24 px-8 md:px-24 flex justify-center">
+      <section className="relative w-full bg-brown py-24 px-8 md:px-24 flex justify-center">
         
-        {/* Efeito de papel rasgado separando as sessões */}
-        <div className="absolute top-0 left-0 w-full h-8 bg-primary -translate-y-full rotate-180 mask-edge z-10" />
+        {/* Efeito de papel rasgado superior separando as seções */}
+        <img
+          src={paperTexture}
+          alt=""
+          aria-hidden="true"
+          className="absolute top-0 left-0 -translate-y-1/2 w-full h-8 md:h-12 object-cover z-30 pointer-events-none select-none"
+        />
 
-        <div className="w-full max-w-6xl flex flex-col gap-12">
+        <div className="relative z-20 w-full max-w-6xl flex flex-col gap-12">
           
           {/* Cabeçalho Depoimentos */}
-          <div className="flex flex-col md:flex-row justify-between items-end gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
             <div>
-              <h2 className="text-white text-5xl md:text-6xl font-['Anton'] uppercase leading-none mb-2">
+              <h2 className="text-white text-5xl md:text-6xl font-anton uppercase leading-none mb-3">
                 O que falam <br/> 
-                <span className="text-terciary">sobre o trabalho</span>
+                <span className="text-pink">sobre o trabalho</span>
               </h2>
-              <p className="text-secundary text-lg">Resultados que falam mais que palavras.</p>
+              <p className="text-off-white font-inter font-semibold text-base md:text-lg">
+                Resultados que falam mais que palavras.
+              </p>
             </div>
             
-            <div className="relative">
+            <div className="relative inline-block mt-6 md:mt-0 mr-10 md:mr-12">
               {/* Botão flutuante estilizado */}
-              <span className="titan-regular bg-terciary text-white px-6 py-2 rounded-sm uppercase tracking-wider text-sm shadow-md">
+              <span className="inline-block titan-regular bg-pink text-white px-6 py-2.5 rounded-sm uppercase tracking-wider text-sm">
                 Depoimentos
               </span>
-              {/* Espaço reservado para aquele ícone/vetor pontilhado rosa do Figma, se você tiver exportado */}
-              <div className="absolute -right-8 -top-8 w-12 h-12 bg-contain bg-no-repeat opacity-50" style={{ backgroundImage: "url('/assets/decoracao-depoimento.png')" }}></div>
+              {/* Detalhe decorativo dos três traços rosas */}
+              <img
+                src={buttonDetail}
+                alt=""
+                aria-hidden="true"
+                className="absolute -top-9 -right-10 md:-top-11 md:-right-12 w-12 h-12 md:w-14 md:h-14 object-contain pointer-events-none select-none"
+              />
             </div>
           </div>
 
@@ -109,6 +132,14 @@ export default function ProcessAndTestimonials() {
           </div>
 
         </div>
+
+        {/* Efeito de papel rasgado inferior separando as seções */}
+        <img
+          src={paperTexture}
+          alt=""
+          aria-hidden="true"
+          className="absolute bottom-0 left-0 translate-y-1/2 w-full h-8 md:h-12 object-cover z-30 pointer-events-none select-none"
+        />
       </section>
     </div>
   );
