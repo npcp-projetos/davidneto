@@ -1,13 +1,16 @@
 import hero from '../assets/images/hero.webp';
 import { Button } from './Button';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section>
       <div className="relative w-full min-h-125 flex items-center justify-start overflow-hidden shadow-lg">
         <img 
           src={hero} 
-          alt="Banner David Neto" 
+          alt={t.hero.bannerAlt} 
           className="absolute inset-0 w-full h-full object-cover object-right pointer-events-none"
         />
 
@@ -15,16 +18,16 @@ export default function Hero() {
 
         <div className="relative z-20 text-left text-white px-4 md:px-16 py-12 max-w-2xl space-y-4">
           <h1 className="text-4xl md:text-6xl font-anton uppercase tracking-tight drop-shadow-md">
-            Você cria.<br />
-            <span className="whitespace-nowrap text-pink">Eu faço acontecer.</span>
+            {t.hero.titleLine1}<br />
+            <span className="whitespace-nowrap text-pink">{t.hero.titleLine2}</span>
           </h1>
           <p className="text-sm md:text-base text-gray-200">
-            Edição de vídeos para criadores que querem<br /> transformar boas ideias em conteúdos memoráveis.
+            {t.hero.subtitleLine1}<br /> {t.hero.subtitleLine2}
           </p>
 
           <div className="flex gap-3">
             <Button element="anchor" href="#contact" variant="primary" size="lg">
-              Quero fazer um orçamento
+              {t.hero.ctaButton}
             </Button>
           </div>
         </div>

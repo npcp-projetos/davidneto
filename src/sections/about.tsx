@@ -3,8 +3,11 @@ import TimelineStep from "../components/passos";
 import TestimonialCard from "../components/testimonials";
 import paperTexture from "../assets/images/efeito-papel-rasgado.png";
 import buttonDetail from "../assets/images/efeito-botao-depoimento.png";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function ProcessAndTestimonials() {
+  const { t } = useLanguage();
+
   return (
     <div className="w-full flex flex-col">
       
@@ -24,11 +27,11 @@ export default function ProcessAndTestimonials() {
           {/* Título da Esquerda */}
           <div className="lg:w-1/3 flex flex-col">
             <h2 className="text-6xl font-anton uppercase leading-none mb-4 tracking-wide">
-              <span className="text-primary block">Como</span>
-              <span className="text-terciary block">Funciona</span>
+              <span className="text-primary block">{t.process.titleLine1}</span>
+              <span className="text-terciary block">{t.process.titleLine2}</span>
             </h2>
             <p className="text-primary font-inter text-lg md:text-xl font-bold max-w-xs">
-              Simples, direto e feito para você!
+              {t.process.subtitle}
             </p>
           </div>
 
@@ -43,27 +46,27 @@ export default function ProcessAndTestimonials() {
 
             <TimelineStep 
               number="1" 
-              titleTop="Você entra" 
-              titleBottom="Em contato" 
-              description="Me conta sua ideia, objetivo e tipo de vídeo que você precisa." 
+              titleTop={t.process.steps.step1TitleTop} 
+              titleBottom={t.process.steps.step1TitleBottom} 
+              description={t.process.steps.step1Description} 
             />
             <TimelineStep 
               number="2" 
-              titleTop="Recebo seus" 
-              titleBottom="Arquivos" 
-              description="Você me envia da maneira que preferir." 
+              titleTop={t.process.steps.step2TitleTop} 
+              titleBottom={t.process.steps.step2TitleBottom} 
+              description={t.process.steps.step2Description} 
             />
             <TimelineStep 
               number="3" 
-              titleTop="Começo a" 
-              titleBottom="Edição" 
-              description="Organização, cortes, montagem." 
+              titleTop={t.process.steps.step3TitleTop} 
+              titleBottom={t.process.steps.step3TitleBottom} 
+              description={t.process.steps.step3Description} 
             />
             <TimelineStep 
               number="4" 
-              titleTop="Você recebe" 
-              titleBottom="Pronto" 
-              description="Entrega dentro do prazo e ajuste se necessário." 
+              titleTop={t.process.steps.step4TitleTop} 
+              titleBottom={t.process.steps.step4TitleBottom} 
+              description={t.process.steps.step4Description} 
             />
           </div>
         </div>
@@ -87,18 +90,18 @@ export default function ProcessAndTestimonials() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
             <div>
               <h2 className="text-white text-5xl md:text-6xl font-anton uppercase leading-none mb-3">
-                O que falam <br/> 
-                <span className="text-pink">sobre o trabalho</span>
+                {t.testimonials.titleLine1} <br/> 
+                <span className="text-pink">{t.testimonials.titleLine2}</span>
               </h2>
               <p className="text-off-white font-inter font-semibold text-base md:text-lg">
-                Resultados que falam mais que palavras.
+                {t.testimonials.subtitle}
               </p>
             </div>
             
             <div className="relative inline-block mt-6 md:mt-0 mr-10 md:mr-12">
               {/* Botão flutuante estilizado */}
               <span className="inline-block titan-regular bg-pink text-white px-6 py-2.5 rounded-sm uppercase tracking-wider text-sm">
-                Depoimentos
+                {t.testimonials.badge}
               </span>
               {/* Detalhe decorativo dos três traços rosas */}
               <img
@@ -113,24 +116,24 @@ export default function ProcessAndTestimonials() {
           {/* Grid de Cartões */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
             <TestimonialCard 
-              quote="Desde que eu comecei a trabalhar com David, meus vídeos evoluíram muito."
+              quote={t.testimonials.cards.card1Quote}
               author="Caio Morelli"
-              role="Criador de conteúdo"
+              role={t.testimonials.cards.card1Role}
             />
             <TestimonialCard 
-              quote="Edição impecável. Ele entende o que eu quero mesmo quando não sei explicar."
+              quote={t.testimonials.cards.card2Quote}
               author="Rafaela Lima"
-              role="Empreendedora"
+              role={t.testimonials.cards.card2Role}
             />
             <TestimonialCard 
-              quote="Meu canal deu outro salto quando comecei a investir em edição profissional."
+              quote={t.testimonials.cards.card3Quote}
               author="Victor Hugo"
-              role="Youtuber"
+              role={t.testimonials.cards.card3Role}
             />
             <TestimonialCard 
-              quote="Edições perfeitas e entregas dentro do prazo."
+              quote={t.testimonials.cards.card4Quote}
               author="Felipe Mendes"
-              role="Criador de conteúdo"
+              role={t.testimonials.cards.card4Role}
             />
           </div>
 

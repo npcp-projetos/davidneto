@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Form() {
+  const { t } = useLanguage();
   const [telefone, setTelefone] = useState("");
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -37,11 +39,11 @@ export default function Form() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-8 md:gap-y-5 w-full items-end">
         <div className="flex flex-col justify-end gap-1.5 w-full">
           <label className="text-secundary anton-regular text-sm md:text-base tracking-wide" htmlFor="email">
-            NOME COMPLETO
+            {t.form.nameLabel}
           </label>
           <input
             className="px-3.5 py-2 h-10 rounded-md w-full border border-secundary text-secundary text-sm font-inter bg-transparent focus:outline-none focus:border-terciary"
-            placeholder="Digite seu nome"
+            placeholder={t.form.namePlaceholder}
             type="text"
             name="email"
             id="email"
@@ -49,11 +51,11 @@ export default function Form() {
         </div>
         <div className="flex flex-col justify-end gap-1.5 w-full">
           <label className="text-secundary anton-regular text-sm md:text-base tracking-wide" htmlFor="social">
-            REDE SOCIAL
+            {t.form.socialLabel}
           </label>
           <input
             className="px-3.5 py-2 h-10 rounded-md w-full border border-secundary text-secundary text-sm font-inter bg-transparent focus:outline-none focus:border-terciary"
-            placeholder="Digite seu username"
+            placeholder={t.form.socialPlaceholder}
             type="text"
             name="social"
             id="social"
@@ -61,11 +63,11 @@ export default function Form() {
         </div>
         <div className="flex flex-col justify-end gap-1.5 w-full">
           <label className="text-secundary anton-regular text-sm md:text-base tracking-wide" htmlFor="telefone">
-            TELEFONE
+            {t.form.phoneLabel}
           </label>
           <input
             className="px-3.5 py-2 h-10 rounded-md w-full border border-secundary text-secundary text-sm font-inter bg-transparent focus:outline-none focus:border-terciary [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-            placeholder="(XX) XXXXX-XXXX"
+            placeholder={t.form.phonePlaceholder}
             type="tel"
             inputMode="numeric"
             pattern="[0-9]*"
@@ -79,11 +81,11 @@ export default function Form() {
         </div>
         <div className="flex flex-col justify-end gap-1.5 w-full">
           <label className="text-secundary anton-regular text-sm md:text-base tracking-wide" htmlFor="conteudo">
-            QUAL TIPO DE CONTEÚDO VOCÊ PRODUZ?
+            {t.form.contentLabel}
           </label>
           <input
             className="px-3.5 py-2 h-10 rounded-md w-full border border-secundary text-secundary text-sm font-inter bg-transparent focus:outline-none focus:border-terciary"
-            placeholder="Ex: Vlogs, Podcasts, Reels,..."
+            placeholder={t.form.contentPlaceholder}
             type="text"
             name="conteudo"
             id="conteudo"
@@ -93,11 +95,11 @@ export default function Form() {
 
       <div className="flex flex-col gap-1.5 w-full">
         <label className="text-secundary anton-regular text-sm md:text-base tracking-wide" htmlFor="projeto">
-          CONTE UM POUCO SOBRE O PROJETO
+          {t.form.projectLabel}
         </label>
         <textarea
           className="p-3.5 rounded-md w-full h-32 md:h-36 border border-secundary resize-none text-secundary text-sm font-inter bg-transparent focus:outline-none focus:border-terciary"
-          placeholder="Fale sobre seu projeto, objetivo, referências, prazo,..."
+          placeholder={t.form.projectPlaceholder}
           name="projeto"
           id="projeto"
           rows={4}

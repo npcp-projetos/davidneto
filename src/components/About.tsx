@@ -1,12 +1,15 @@
 // import aboutImage from '../assets/images/about-image.webp';
 import paperTexture from '../assets/images/efeito-papel-rasgado.png';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function About() {
+  const { t } = useLanguage();
+
   const metrics = [
-    { value: "+80", label: "Vídeos Entregues" },
-    { value: "+6", label: "Profissionais Atendidos" },
-    { value: "+3", label: "Eventos Cobertos" },
-    { value: "+3", label: "Curtas Metragens Feitos" },
+    { value: "+80", label: t.about.metrics.videosDelivered },
+    { value: "+6", label: t.about.metrics.professionalsServed },
+    { value: "+3", label: t.about.metrics.eventsCovered },
+    { value: "+3", label: t.about.metrics.shortFilmsMade },
   ];
 
   return (
@@ -34,29 +37,20 @@ export default function About() {
 
             <div className="md:col-span-7 space-y-4">
               <h2 className="font-anton text-3xl md:text-4xl uppercase tracking-wide leading-none text-brown">
-                Não entrego só <span className="text-pink inline-block">edição.</span>
+                {t.about.titlePrefix} <span className="text-pink inline-block">{t.about.titleHighlight}</span>
               </h2>
 
               <div className="space-y-1.5 text-brown text-xs sm:text-sm leading-relaxed font-inter font-medium">
                 <p>
-                  Meu nome é
-                  <strong className="text-pink font-bold"> David Neto</strong> e o
-                  audiovisual é a linguagem que escolhi para traduzir tudo o que
-                  minha boca não consegue falar. Acredito que tudo se comunica,
-                  inclusive o que passa despercebido, e é desse olhar atento que
-                  nasce o meu trabalho.
+                  {t.about.bioParagraph1BeforeName}
+                  <strong className="text-pink font-bold">{t.about.bioName}</strong>
+                  {t.about.bioParagraph1AfterName}
                 </p>
                 <p>
-                  Enquadramentos, ritmo e silêncios não são escolhas técnicas para
-                  mim, mas decisões de sentido. Busco transformar ideias simples
-                  em Imagens com identidade, criando vídeos que equilibram
-                  estética e intenção.
+                  {t.about.bioParagraph2}
                 </p>
                 <p>
-                  Ao colaborar com marcas, meu foco é traduzir a essência em
-                  imagem, construindo conteúdos com personalidade, qualidade e
-                  coerência, pensados não apenas para serem vistos, mas para
-                  permanecerem.
+                  {t.about.bioParagraph3}
                 </p>
               </div>
             </div>
@@ -64,8 +58,8 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 pt-2 max-w-4xl mx-auto text-center">
-            {metrics.map(({ value, label }) => (
-              <div key={label} className="flex flex-col items-center">
+            {metrics.map(({ value, label }, index) => (
+              <div key={index} className="flex flex-col items-center">
                 <span className="font-anton text-3xl md:text-4xl text-pink uppercase leading-none">
                   {value}
                 </span>
