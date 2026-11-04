@@ -177,14 +177,14 @@ export const translations = {
       subtitle: "Results that speak louder than words.", // PT: "Resultados que falam mais que palavras."
       badge: "Testimonials", // PT: "Depoimentos"
       cards: {
-        card1Quote: "INSERIR_TEXTO_EM_INGLES", // PT: "Desde que eu comecei a trabalhar com David, meus vídeos evoluíram muito."
-        card1Role: "INSERIR_TEXTO_EM_INGLES", // PT: "Criador de conteúdo"
-        card2Quote: "INSERIR_TEXTO_EM_INGLES", // PT: "Edição impecável. Ele entende o que eu quero mesmo quando não sei explicar."
-        card2Role: "INSERIR_TEXTO_EM_INGLES", // PT: "Empreendedora"
-        card3Quote: "INSERIR_TEXTO_EM_INGLES", // PT: "Meu canal deu outro salto quando comecei a investir em edição profissional."
-        card3Role: "INSERIR_TEXTO_EM_INGLES", // PT: "Youtuber"
-        card4Quote: "INSERIR_TEXTO_EM_INGLES", // PT: "Edições perfeitas e entregas dentro do prazo."
-        card4Role: "INSERIR_TEXTO_EM_INGLES", // PT: "Criador de conteúdo"
+        card1Quote: "Since I started working with David, my videos have improved significantly.", // PT: "Desde que eu comecei a trabalhar com David, meus vídeos evoluíram muito."
+        card1Role: "Content Creator", // PT: "Criador de conteúdo"
+        card2Quote: "Flawless editing. He understands what I want even when I can't explain it.", // PT: "Edição impecável. Ele entende o que eu quero mesmo quando não sei explicar."
+        card2Role: "Entrepreneur", // PT: "Empreendedora"
+        card3Quote: "My channel took a massive leap when I began investing in professional editing.", // PT: "Meu canal deu outro salto quando comecei a investir em edição profissional."
+        card3Role: "YouTuber", // PT: "Youtuber"
+        card4Quote: "Perfect edits and on-time deliveries.", // PT: "Edições perfeitas e entregas dentro do prazo."
+        card4Role: "Content Creator", // PT: "Criador de conteúdo"
       },
     },
     contact: {
