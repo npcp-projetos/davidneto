@@ -11,7 +11,7 @@ interface VideoItem {
 
 // 1. Vídeos Curtos (Curta Metragem)
 const videosCurtos: VideoItem[] = [
-  { id: 1, titulo: "Curta Metragem 1", videoUrl: "https://www.youtube.com/embed/ID_VIDEO_CURTO_1" },
+  { id: 1, titulo: "Curta Metragem 1", videoUrl: "https://www.youtube.com/embed/tgPdLzxGJkE" },
   { id: 2, titulo: "Curta Metragem 2", videoUrl: "https://www.youtube.com/embed/ID_VIDEO_CURTO_2" },
   { id: 3, titulo: "Curta Metragem 3", videoUrl: "https://www.youtube.com/embed/ID_VIDEO_CURTO_3" },
   { id: 4, titulo: "Curta Metragem 4", videoUrl: "https://www.youtube.com/embed/ID_VIDEO_CURTO_4" },
