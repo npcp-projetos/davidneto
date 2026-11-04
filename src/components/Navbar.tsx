@@ -25,19 +25,19 @@ export default function Navbar() {
           <div className="hidden md:flex gap-8">
             <ul className="flex items-center gap-10 list-none m-0 p-0 font-anton text-lg">
               <li>
-                <a href="#" className="uppercase text-white hover:opacity-80 transition-opacity">Sobre mim</a>
+                <a href="#sobre-mim" className="uppercase text-white hover:opacity-80 transition-opacity">Sobre mim</a>
               </li>
               <li>
-                <a href="#" className="uppercase text-white hover:opacity-80 transition-opacity">Trabalhos</a>
+                <a href="#project" className="uppercase text-white hover:opacity-80 transition-opacity">Trabalhos</a>
               </li>
               <li>
-                <a href="#" className="uppercase text-white hover:opacity-80 transition-opacity">Como Funciona</a>
+                <a href="#como-funciona" className="uppercase text-white hover:opacity-80 transition-opacity">Como Funciona</a>
               </li>
             </ul>
 
             <div className="flex items-center gap-3">
                 <Button variant="outline" size="sm" onClick={toggleLanguage}>English</Button>
-                <Button element="anchor" href="#orcamento" variant="outline-pink" size="sm">Orçamento</Button>
+                <Button element="anchor" href="#contact" variant="outline-pink" size="sm">Orçamento</Button>
             </div>
           </div>
         
@@ -56,14 +56,14 @@ export default function Navbar() {
         {isOpen && (
           <div id="mobile-menu" className="md:hidden px-4 pb-4 pt-2 border-t border-white/10 mt-2">
             <ul className="flex flex-col list-none m-0 p-0 font-anton text-lg">
-              <li><a href="#" onClick={close} className="block py-3 uppercase text-white hover:opacity-80">Sobre mim</a></li>
-              <li><a href="#" onClick={close} className="block py-3 uppercase text-white hover:opacity-80">Trabalhos</a></li>
-              <li><a href="#" onClick={close} className="block py-3 uppercase text-white hover:opacity-80">Como Funciona</a></li>
+              <li><a href="#sobre-mim" onClick={close} className="block py-3 uppercase text-white hover:opacity-80">Sobre mim</a></li>
+              <li><a href="#project" onClick={close} className="block py-3 uppercase text-white hover:opacity-80">Trabalhos</a></li>
+              <li><a href="#como-funciona" onClick={close} className="block py-3 uppercase text-white hover:opacity-80">Como Funciona</a></li>
             </ul>
 
             <div className="flex flex-col gap-3 pt-3">
               <Button variant="outline" classes="w-full justify-center" onClick={toggleLanguage}>English</Button>
-              <Button element="anchor" href="#orcamento" variant="outline-pink" classes="w-full justify-center" onClick={close}>Orçamento</Button>
+              <Button element="anchor" href="#contact" variant="outline-pink" classes="w-full justify-center" onClick={close}>Orçamento</Button>
             </div>
           </div>
         )}

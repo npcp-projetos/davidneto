@@ -23,7 +23,7 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-3">
-            <Button element="anchor" href="#orcamento" variant="primary" size="lg">
+            <Button element="anchor" href="#contact" variant="primary" size="lg">
               Quero fazer um orçamento
             </Button>
           </div>

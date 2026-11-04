@@ -9,7 +9,7 @@ export default function ProcessAndTestimonials() {
     <div className="w-full flex flex-col">
       
       {/* Fundo creme aplicado com bg-secundary */}
-      <section className="relative w-full bg-secundary py-20 px-8 md:px-24 flex justify-center">
+      <section id="como-funciona" className="relative w-full bg-secundary py-20 px-8 md:px-24 flex justify-center">
         
         {/* Efeito de papel rasgado superior separando as seções */}
         <img
@@ -33,9 +33,12 @@ export default function ProcessAndTestimonials() {
           </div>
 
           {/* Timeline da Direita */}
-          <div className="lg:w-2/3 relative flex flex-col md:flex-row justify-between gap-6 md:gap-4 w-full mt-8 lg:mt-0">
+          <div className="lg:w-2/3 relative flex flex-col md:flex-row justify-between gap-8 md:gap-4 w-full mt-6 lg:mt-0">
             
-            {/* Eixo da Timeline: Linha grossa com bordas arredondadas que passa por trás */}
+            {/* Eixo Vertical da Timeline (Mobile): Linha reta vertical conectando os círculos numerados */}
+            <div className="md:hidden absolute top-2 bottom-8 left-6 -translate-x-1/2 w-2.5 bg-terciary rounded-full z-0"></div>
+
+            {/* Eixo Horizontal da Timeline (Desktop): Linha grossa com bordas arredondadas que passa por trás */}
             <div className="hidden md:block absolute top-4.5 left-3.75 right-3.75 h-3 bg-terciary rounded-full z-0"></div>
 
             <TimelineStep 
