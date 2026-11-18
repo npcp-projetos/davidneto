@@ -1,4 +1,4 @@
-// import aboutImage from '../assets/images/about-image.webp';
+import aboutImage from '../assets/images/davidfoto.jpg';
 import { useEffect, useRef, useState } from 'react';
 import paperTexture from '../assets/images/efeito-papel-rasgado.png';
 import { useLanguage } from '../context/LanguageContext';
@@ -46,25 +46,25 @@ export default function About() {
       />
 
       <div className="relative w-full flex items-center justify-center">
-        <div className="relative z-20 w-full max-w-5xl mx-auto px-6 md:px-12 py-10 md:py-14 space-y-10">
+        <div className="relative z-20 w-full max-w-5xl mx-auto px-6 md:px-12 py-10 md:py-14 space-y-8 md:space-y-10">
           
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-center">
-            <div className="md:col-span-5 flex justify-center md:justify-start">
-              <div className="w-full max-w-sm h-52 sm:h-56 md:h-60 bg-stone-300 rounded-sm overflow-hidden">
-                {/* <img
+            <div className="md:col-span-5 flex justify-center">
+              <div className="w-60 sm:w-64 md:w-72 aspect-4/5 bg-stone-300 rounded-md overflow-hidden shadow-md border border-brown/10">
+                <img
                   src={aboutImage}
                   alt="David Neto"
-                  className="w-full h-full object-cover"
-                /> */}
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
             </div>
 
-            <div className="md:col-span-7 space-y-4">
+            <div className="md:col-span-7 space-y-4 text-center md:text-left">
               <h2 className="font-anton text-3xl md:text-4xl uppercase tracking-wide leading-none text-brown">
                 {t.about.titlePrefix} <span className="text-pink inline-block">{t.about.titleHighlight}</span>
               </h2>
 
-              <div className="space-y-1.5 text-brown text-xs sm:text-sm leading-relaxed font-inter font-medium">
+              <div className="space-y-2 text-brown text-xs sm:text-sm leading-relaxed font-inter font-medium">
                 <p>
                   {t.about.bioParagraph1BeforeName}
                   <strong className="text-pink font-bold">{t.about.bioName}</strong>
