@@ -1,9 +1,33 @@
 // import aboutImage from '../assets/images/about-image.webp';
+import { useEffect, useRef, useState } from 'react';
 import paperTexture from '../assets/images/efeito-papel-rasgado.png';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function About() {
   const { t } = useLanguage();
+  const [isVisible, setIsVisible] = useState(false);
+  const metricsRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const element = metricsRef.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(element);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(element);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   const metrics = [
     { value: "+80", label: t.about.metrics.videosDelivered },
@@ -57,9 +81,20 @@ export default function About() {
             
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 pt-2 max-w-4xl mx-auto text-center">
+          <div
+            ref={metricsRef}
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 pt-2 max-w-4xl mx-auto text-center"
+          >
             {metrics.map(({ value, label }, index) => (
-              <div key={index} className="flex flex-col items-center">
+              <div
+                key={index}
+                style={{ transitionDelay: `${index * 600}ms` }}
+                className={`flex flex-col items-center transition-all duration-1200 ease-out ${
+                  isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                }`}
+              >
                 <span className="font-anton text-3xl md:text-4xl text-pink uppercase leading-none">
                   {value}
                 </span>

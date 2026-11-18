@@ -1,4 +1,5 @@
 // src/sections/about.tsx (ou o nome que preferir dar a esta seção)
+import { useEffect, useRef, useState } from "react";
 import TimelineStep from "../components/passos";
 import TestimonialCard from "../components/testimonials";
 import paperTexture from "../assets/images/efeito-papel-rasgado.png";
@@ -7,12 +8,67 @@ import { useLanguage } from "../context/LanguageContext";
 
 export default function ProcessAndTestimonials() {
   const { t } = useLanguage();
+  const [isTimelineVisible, setIsTimelineVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const element = sectionRef.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsTimelineVisible(true);
+          observer.unobserve(element);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(element);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  const steps = [
+    {
+      number: "1",
+      titleTop: t.process.steps.step1TitleTop,
+      titleBottom: t.process.steps.step1TitleBottom,
+      description: t.process.steps.step1Description,
+      href: "#contact",
+    },
+    {
+      number: "2",
+      titleTop: t.process.steps.step2TitleTop,
+      titleBottom: t.process.steps.step2TitleBottom,
+      description: t.process.steps.step2Description,
+    },
+    {
+      number: "3",
+      titleTop: t.process.steps.step3TitleTop,
+      titleBottom: t.process.steps.step3TitleBottom,
+      description: t.process.steps.step3Description,
+    },
+    {
+      number: "4",
+      titleTop: t.process.steps.step4TitleTop,
+      titleBottom: t.process.steps.step4TitleBottom,
+      description: t.process.steps.step4Description,
+    },
+  ];
 
   return (
     <div className="w-full flex flex-col">
       
       {/* Fundo creme aplicado com bg-secundary */}
-      <section id="como-funciona" className="relative w-full bg-secundary py-20 px-8 md:px-24 flex justify-center">
+      <section
+        id="como-funciona"
+        ref={sectionRef}
+        className="relative w-full bg-secundary py-20 px-8 md:px-24 flex justify-center"
+      >
         
         {/* Efeito de papel rasgado superior separando as seções */}
         <img
@@ -39,35 +95,31 @@ export default function ProcessAndTestimonials() {
           <div className="lg:w-2/3 relative flex flex-col md:flex-row justify-between gap-8 md:gap-4 w-full mt-6 lg:mt-0">
             
             {/* Eixo Vertical da Timeline (Mobile): Linha reta vertical conectando os círculos numerados */}
-            <div className="md:hidden absolute top-2 bottom-8 left-6 -translate-x-1/2 w-2.5 bg-terciary rounded-full z-0"></div>
+            <div
+              className={`md:hidden absolute top-2 bottom-8 left-6 -translate-x-1/2 w-2.5 bg-terciary rounded-full z-0 origin-top transition-transform duration-1500 ease-out ${
+                isTimelineVisible ? "scale-y-100" : "scale-y-0"
+              }`}
+            ></div>
 
             {/* Eixo Horizontal da Timeline (Desktop): Linha grossa com bordas arredondadas que passa por trás */}
-            <div className="hidden md:block absolute top-4.5 left-3.75 right-3.75 h-3 bg-terciary rounded-full z-0"></div>
+            <div
+              className={`hidden md:block absolute top-4.5 left-3.75 right-3.75 h-3 bg-terciary rounded-full z-0 origin-left transition-transform duration-2800 ease-out ${
+                isTimelineVisible ? "scale-x-100" : "scale-x-0"
+              }`}
+            ></div>
 
-            <TimelineStep 
-              number="1" 
-              titleTop={t.process.steps.step1TitleTop} 
-              titleBottom={t.process.steps.step1TitleBottom} 
-              description={t.process.steps.step1Description} 
-            />
-            <TimelineStep 
-              number="2" 
-              titleTop={t.process.steps.step2TitleTop} 
-              titleBottom={t.process.steps.step2TitleBottom} 
-              description={t.process.steps.step2Description} 
-            />
-            <TimelineStep 
-              number="3" 
-              titleTop={t.process.steps.step3TitleTop} 
-              titleBottom={t.process.steps.step3TitleBottom} 
-              description={t.process.steps.step3Description} 
-            />
-            <TimelineStep 
-              number="4" 
-              titleTop={t.process.steps.step4TitleTop} 
-              titleBottom={t.process.steps.step4TitleBottom} 
-              description={t.process.steps.step4Description} 
-            />
+            {steps.map((step, index) => (
+              <TimelineStep
+                key={step.number}
+                index={index}
+                isVisible={isTimelineVisible}
+                number={step.number}
+                titleTop={step.titleTop}
+                titleBottom={step.titleBottom}
+                description={step.description}
+                href={step.href}
+              />
+            ))}
           </div>
         </div>
       </section>
