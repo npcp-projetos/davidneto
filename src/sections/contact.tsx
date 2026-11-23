@@ -10,7 +10,7 @@ export default function Contact() {
         <div className="hidden md:block md:w-1/3 lg:w-2/5 h-full shrink-0 overflow-hidden">
           <img
             className="w-full h-full object-cover object-top"
-            src="/imagem_david.png"
+            src="/imagem_form.jpg"
             alt="David Neto"
           />
         </div>
