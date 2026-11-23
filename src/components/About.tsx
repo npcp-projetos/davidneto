@@ -1,6 +1,6 @@
-// import aboutImage from '../assets/images/imagem_biografia.jpg';
+import aboutImage from '../assets/images/imagem_biografia.jpg';
 // import aboutImage from '../assets/images/davidfoto.jpg';
-import aboutImage from '../assets/images/imagem_alt_biografia.jpg';
+// import aboutImage from '../assets/images/imagem_alt_biografia.jpg';
 import { useEffect, useRef, useState } from 'react';
 import paperTexture from '../assets/images/efeito-papel-rasgado.png';
 import { useLanguage } from '../context/LanguageContext';
