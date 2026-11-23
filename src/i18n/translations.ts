@@ -54,14 +54,14 @@ export const translations = {
         step1TitleTop: "Você entra",
         step1TitleBottom: "Em contato",
         step1Description: "Me conta sua ideia, objetivo e tipo de vídeo que você precisa.",
-        step2TitleTop: "Recebo seus",
-        step2TitleBottom: "Arquivos",
+        step2TitleTop: "Alinhamos o",
+        step2TitleBottom: "Projeto",
         step2Description: "Você me envia da maneira que preferir.",
-        step3TitleTop: "Começo a",
-        step3TitleBottom: "Edição",
+        step3TitleTop: "Recebo e Edito o",
+        step3TitleBottom: "Material",
         step3Description: "Organização, cortes, montagem.",
-        step4TitleTop: "Você recebe",
-        step4TitleBottom: "Pronto",
+        step4TitleTop: "Você recebe e",
+        step4TitleBottom: "Pronto!",
         step4Description: "Entrega dentro do prazo e ajuste se necessário.",
       },
     },
@@ -161,14 +161,14 @@ export const translations = {
         step1TitleTop: "You Reach", // PT: "Você entra"
         step1TitleBottom: " Out", // PT: "Em contato"
         step1Description: "Tell me your idea, goal, and the type of video you need.", // PT: "Me conta sua ideia, objetivo e tipo de vídeo que você precisa."
-        step2TitleTop: "I Receive Your", // PT: "Recebo seus"
-        step2TitleBottom: "Files", // PT: "Arquivos"
+        step2TitleTop: "We Plan Your", // PT: "Recebo seus"
+        step2TitleBottom: "Project", // PT: "Arquivos"
         step2Description: "Send them to me whichever way you prefer.", // PT: "Você me envia da maneira que preferir."
-        step3TitleTop: "I Start", // PT: "Começo a"
-        step3TitleBottom: "Editing", // PT: "Edição"
+        step3TitleTop: "I Get Your Content and", // PT: "Começo a"
+        step3TitleBottom: "Edit It", // PT: "Edição"
         step3Description: "Organization, cuts, and assembly.", // PT: "Organização, cortes, montagem."
-        step4TitleTop: "You Receive", // PT: "Você recebe"
-        step4TitleBottom: "The Final Cut", // PT: "Pronto"
+        step4TitleTop: "You Get", // PT: "Você recebe"
+        step4TitleBottom: "The Final Result", // PT: "Pronto"
         step4Description: "On-time delivery and revisions if needed.", // PT: "Entrega dentro do prazo e ajuste se necessário."
       },
     },
