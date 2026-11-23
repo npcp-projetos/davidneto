@@ -15,8 +15,8 @@ export const translations = {
     },
     hero: {
       bannerAlt: "Banner David Neto",
-      titleLine1: "Você cria.",
-      titleLine2: "Eu faço acontecer.",
+      titleLine1: "Story Telling Visual",
+      titleLine2: "Para Ir Além!",
       subtitleLine1: "Edição de vídeos para criadores que querem",
       subtitleLine2: "transformar boas ideias em conteúdos memoráveis.",
       ctaButton: "Quero fazer um orçamento",
@@ -121,8 +121,8 @@ export const translations = {
     },
     hero: {
       bannerAlt: "Banner David Neto", // PT: "Banner David Neto"
-      titleLine1: "You Create.", // PT: "Você cria."
-      titleLine2: "I Make It Happen.", // PT: "Eu faço acontecer."
+      titleLine1: "Visual Storytelling", // PT: "Storytelling Visual"
+      titleLine2: "That Goes Beyond!", // PT: "Para Ir Além!"
       subtitleLine1: "Video editing for creators who want to", // PT: "Edição de vídeos para criadores que querem"
       subtitleLine2: "turn good ideas into memorable content.", // PT: "transformar boas ideias em conteúdos memoráveis."
       ctaButton: "Request a Quote", // PT: "Quero fazer um orçamento"

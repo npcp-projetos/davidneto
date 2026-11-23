@@ -1,4 +1,6 @@
-import hero from '../assets/images/hero.webp';
+// import hero from '../assets/images/hero.webp';
+// import fundo from '../assets/images/fundo-portfolio.png';
+import fundo2 from '../assets/images/fundo-padrao-portfolio.png';
 import { Button } from './Button';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -9,7 +11,7 @@ export default function Hero() {
     <section>
       <div className="relative w-full min-h-125 flex items-center justify-start overflow-hidden shadow-lg">
         <img 
-          src={hero} 
+          src={fundo2} 
           alt={t.hero.bannerAlt} 
           className="absolute inset-0 w-full h-full object-cover object-right pointer-events-none"
         />
