@@ -98,6 +98,7 @@ export const translations = {
       contentPlaceholder: "Ex: Vlogs, Podcasts, Reels,...",
       projectLabel: "CONTE UM POUCO SOBRE O PROJETO",
       projectPlaceholder: "Fale sobre seu projeto, objetivo, referências, prazo,...",
+      submitButton: "ENVIAR MENSAGEM",
     },
     footer: {
       quickLinksTitle: "LINKS RÁPIDOS",
@@ -204,6 +205,7 @@ export const translations = {
       contentPlaceholder: "E.g., Vlogs, Podcasts, Reels,...", // PT: "Ex: Vlogs, Podcasts, Reels,..."
       projectLabel: "Tell Me a Bit About The Project", // PT: "CONTE UM POUCO SOBRE O PROJETO"
       projectPlaceholder: "Share your project details, goals, references, deadline,...", // PT: "Fale sobre seu projeto, objetivo, referências, prazo,..."
+      submitButton: "SEND MESSAGE", // PT: "ENVIAR MENSAGEM"
     },
     footer: {
       quickLinksTitle: "Quick Links", // PT: "LINKS RÁPIDOS"
@@ -214,4 +216,3 @@ export const translations = {
     },
   },
 };
-
