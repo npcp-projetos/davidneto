@@ -37,7 +37,7 @@ export default function Form() {
   return (
     <form
       id="orcamento"
-      action="https://formsubmit.co/davidnetocontato@gmail.com"
+      action="https://formsubmit.co/6f662a19beb888f908a157d17b91c0"
       method="POST"
       className="bg-primary p-6 md:px-10 md:py-8 flex flex-col gap-5 shadow-md w-full rounded-xl"
     >
