@@ -1,5 +1,6 @@
 import Form from "../components/form";
 import { useLanguage } from "../context/LanguageContext";
+import imagem_form from "../assets/images/imagem_forms.webp";
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -7,10 +8,10 @@ export default function Contact() {
   return (
     <section id="contact" className="w-full md:h-190 bg-secundary">
       <div className="flex flex-col md:flex-row justify-between items-center md:items-stretch w-full h-full bg-secundary">
-        <div className="hidden md:block md:w-1/3 lg:w-2/5 h-full shrink-0 overflow-hidden">
+        <div className="hidden md:block w-1/2 h-full shrink-0 overflow-hidden">
           <img
-            className="w-full h-full object-cover object-top"
-            src="/imagem_form.jpg"
+            className="w-full h-full object-cover object-center"
+            src={imagem_form}
             alt="David Neto"
           />
         </div>
