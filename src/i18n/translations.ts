@@ -150,10 +150,10 @@ export const translations = {
       titlePrefix: "Selected", // PT: "Alguns"
       titleHighlight: "Work", // PT: "Trabalhos"
       shortVideos: "Short-Form Videos", // PT: "Vídeos Curtos"
-      aftermovieReal: "Aftermovies Real Time", // PT: "Aftermovies Real Time"
-      projectUni: "Projetos Universitários",
-      aftermovieEvents: "Aftermovies de Eventos",
-      videoPlaceholder: "Vídeo aqui", // PT: "Vídeo aqui"
+      aftermovieReal: "Real-Time Aftermovies", // PT: "Aftermovies Real Time"
+      projectUni: "University Projects", // PT: ""
+      aftermovieEvents: "Event Aftermovies", // PT: "Aftermovies de Eventos"
+      videoPlaceholder: "Video here", // PT: "Vídeo aqui"
       noVideoPlaceholder: "No video", // PT: "Sem vídeo"
     },
     process: {
@@ -164,7 +164,7 @@ export const translations = {
         step1TitleTop: "You Reach", // PT: "Você entra"
         step1TitleBottom: " Out", // PT: "Em contato"
         step1Description: "Tell me your idea, goal, and the type of video you need.", // PT: "Me conta sua ideia, objetivo e tipo de vídeo que você precisa."
-        step2TitleTop: "We Plan Your", // PT: "Recebo seus"
+        step2TitleTop: "We Plan Your", // PT: "Nós"
         step2TitleBottom: "Project", // PT: "Arquivos"
         step2Description: "Send them to me whichever way you prefer.", // PT: "Você me envia da maneira que preferir."
         step3TitleTop: "I Get Your Content and", // PT: "Começo a"
@@ -203,7 +203,7 @@ export const translations = {
       socialLabel: "SOCIAL MEDIA", // PT: "REDE SOCIAL"
       socialPlaceholder: "Enter your username", // PT: "Digite seu username"
       phoneLabel: "PHONE NUMBER", // PT: "TELEFONE"
-      phonePlaceholder: "", // PT: "(XX) XXXXX-XXXX"
+      phonePlaceholder: "(+XX) (XX) XXXXXXXXX", // PT: "(XX) XXXXX-XXXX"
       contentLabel: "What Type of Content Do You Produce?", // PT: "QUAL TIPO DE CONTEÚDO VOCÊ PRODUZ?"
       contentPlaceholder: "E.g., Vlogs, Podcasts, Reels,...", // PT: "Ex: Vlogs, Podcasts, Reels,..."
       projectLabel: "Tell Me a Bit About The Project", // PT: "CONTE UM POUCO SOBRE O PROJETO"
