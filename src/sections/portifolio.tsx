@@ -33,23 +33,29 @@ const aftermoviesRealTime: VideoItem[] = [
   { id: 4, titulo: "Cobertura Real Time - Bloquinho Delas", videoUrl: "https://www.youtube.com/embed/SAeCztMyDh4" }, 
 ];
 
-// 3. Vídeos Longos (Longa Metragem)
-const videosLongos: VideoItem[] = [
+// 3. Projetos Universitários
+const projetosUniversitarios: VideoItem[] = [
   { id: 1, titulo: "The Publi Night Show", videoUrl: "https://www.youtube.com/embed/Xdz-JIpMmNA?si=cWX1pBg_LFkcEXUP" },
   { id: 2, titulo: "YouTube video player", videoUrl: "https://www.youtube.com/embed/py7Ims_tihI?si=4sk56OwRfcbyv5Nu" },
   { id: 3, titulo: "YouTube video player", videoUrl: "https://www.youtube.com/embed/BOdRR43j96M?si=dgsGN_9tOTKBLP-2" },
   { id: 4, titulo: "YouTube video player", videoUrl: "https://www.youtube.com/embed/Z27vjEjzDpU?si=fZDeqEI6IgEdiLUw" },
-  { id: 5, titulo: "YouTube video player", videoUrl: "https://www.youtube.com/embed/jtt7TGBn7y4?si=Mr7yY0I2MLgOe0N_" },
-  { id: 6, titulo: "YouTube video player", videoUrl: "https://www.youtube.com/embed/hSDlac4ORSk?si=GrmQl5gHp2RDiYdI" },
-  { id: 7, titulo: "YouTube video player", videoUrl: "https://www.youtube.com/embed/S7xL-YInAuU?si=F5Aa2odOMmExKn78" },
+];
+
+// 4. Aftermovies Eventos
+const aftermoviesEventos: VideoItem[] = [
+  { id: 1, titulo: "YouTube video player", videoUrl: "https://www.youtube.com/embed/jtt7TGBn7y4?si=Mr7yY0I2MLgOe0N_" },
+  { id: 2, titulo: "YouTube video player", videoUrl: "https://www.youtube.com/embed/hSDlac4ORSk?si=GrmQl5gHp2RDiYdI" },
+  { id: 3, titulo: "YouTube video player", videoUrl: "https://www.youtube.com/embed/S7xL-YInAuU?si=F5Aa2odOMmExKn78" },
 ];
 
 export default function Portifolio() {
   const { t } = useLanguage();
 
   const curtosValidos = videosCurtos.filter((v) => extractYouTubeId(v.videoUrl));
-  const longosValidos = videosLongos.filter((v) => extractYouTubeId(v.videoUrl));
+  const projUniValidos = projetosUniversitarios.filter((v) => extractYouTubeId(v.videoUrl));
   const aftermoviesRealValidos = aftermoviesRealTime.filter((v) => extractYouTubeId(v.videoUrl));
+  const aftermoviesEventosValidos = aftermoviesEventos.filter((v) => extractYouTubeId(v.videoUrl));
+
 
   return (
     <section id="project" className="w-full bg-primary py-14 px-8 md:px-16 flex justify-center">
@@ -103,15 +109,34 @@ export default function Portifolio() {
           </div>
         )}
 
-        {/* Categoria: Vídeos Longos */}
-        {longosValidos.length > 0 && (
+        {/* Categoria: Projetos Universitários */}
+        {projUniValidos.length > 0 && (
           <div>
             <span className="titan-regular bg-terciary text-white px-4 py-1 font-bold rounded-sm uppercase tracking-wider text-xs md:text-sm inline-block mb-4">
-              {t.portfolio.longVideos}
+              {t.portfolio.projectUni}
             </span>
 
             <Carousel>
-              {longosValidos.map((video) => (
+              {projUniValidos.map((video) => (
+                <Retangle
+                  key={`longo-${video.id}`}
+                  titulo={video.titulo}
+                  videoUrl={video.videoUrl}
+                />
+              ))}
+            </Carousel>
+          </div>
+        )}
+
+        {/* Categoria: Aftermovies Eventos */}
+        {aftermoviesEventosValidos.length > 0 && (
+          <div>
+            <span className="titan-regular bg-terciary text-white px-4 py-1 font-bold rounded-sm uppercase tracking-wider text-xs md:text-sm inline-block mb-4">
+              {t.portfolio.aftermovieEvents}
+            </span>
+
+            <Carousel>
+              {aftermoviesEventosValidos.map((video) => (
                 <Retangle
                   key={`longo-${video.id}`}
                   titulo={video.titulo}
