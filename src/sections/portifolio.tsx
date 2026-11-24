@@ -11,32 +11,37 @@ interface VideoItem {
 
 // 1. Vídeos Curtos (Curta Metragem)
 const videosCurtos: VideoItem[] = [
-  { id: 1, titulo: "Curta Metragem 1", videoUrl: "https://youtube.com/shorts/IqIAf6buo9A" },
-  { id: 2, titulo: "Curta Metragem 2", videoUrl: "https://youtube.com/shorts/6owF-QrmXZM" },
-  { id: 3, titulo: "Curta Metragem 3", videoUrl: "https://youtube.com/shorts/6jZy6mISBL8" },
-  { id: 4, titulo: "Curta Metragem 4", videoUrl: "https://www.youtube.com/watch?v=QTNvagzRsJA" },
-  { id: 5, titulo: "Curta Metragem 5", videoUrl: "https://youtube.com/shorts/cDBzde56aX8" },
-  { id: 6, titulo: "Curta Metragem 6", videoUrl: "https://youtube.com/shorts/k_yO9UZcB08" },
+  { id: 1, titulo: "Todo Mundo Odeia Ser Estudante - (Dia do Estudante)", videoUrl: "https://www.youtube.com/embed/68ZIGfqF24w" },
+  { id: 2, titulo: "O que é Sankofa - Afrogalaxia", videoUrl: "https://www.youtube.com/embed/A5suq_M2MuE" },
+  { id: 3, titulo: "O Que é o Prisma? - Prêmio Prisma", videoUrl: "https://www.youtube.com/embed/yzVPbpyJNMo" },
+  { id: 4, titulo: "POV: Sequestradas - Pré-Calourada Noite dos Vilões", videoUrl: "https://www.youtube.com/embed/zVyKD3XlZpQ" },
+  { id: 5, titulo: "Análise do Marketing Moma Cookies - Maria Torquato", videoUrl: "https://www.youtube.com/embed/3kwbAX9nB_8" },
+  { id: 6, titulo: "Entrevista Clinica Holiste - Projeto Universitário", videoUrl: "https://www.youtube.com/embed/DEbxj32tVEQ" },
+  { id: 7, titulo: "Americanas Páscoa - Publicidade David Neto", videoUrl: "https://www.youtube.com/embed/bReDc_1t-Q4" },
+  { id: 8, titulo: "Redbull Afropunk", videoUrl: "https://www.youtube.com/embed/DP0CJz_uelQ" },
+  { id: 9, titulo: "Video Sequestro Calouro - Pré-Calourada Noite dos Vilões", videoUrl: "https://www.youtube.com/embed/cfM1653s9no" },
+  { id: 10, titulo: "Aftermovie Adesivaço Zélia", videoUrl: "https://www.youtube.com/embed/zEBOlkaqc9g" },
+  { id: 11, titulo: "Aftermovie Samba Zelia Beneficente - Dia das Crianças", videoUrl: "https://www.youtube.com/embed/5YHNXF8vOgg" },
+  { id: 12, titulo: "Ei Criollo - Pré-Trote 2026.2", videoUrl: "https://www.youtube.com/embed/70XZ7xaCEl4" },
 ];
 
-// 2. Vídeos Longos (Longa Metragem)
+// 2. Aftermovies Real Time
+const aftermoviesRealTime: VideoItem[] = [
+  { id: 1, titulo: "Cobertura Real Time - Zé Paredão", videoUrl: "https://www.youtube.com/embed/hopUUza3IkQ" },
+  { id: 2, titulo: "Cobertura Real Time - Vitrem", videoUrl: "https://www.youtube.com/embed/4C2XSXBoyeI" },
+  { id: 3, titulo: "Cobertura Real Time - DJ Davi Wav", videoUrl: "https://www.youtube.com/embed/67fgUowM2DA" },
+  { id: 4, titulo: "Cobertura Real Time - Bloquinho Delas", videoUrl: "https://www.youtube.com/embed/SAeCztMyDh4" }, 
+];
+
+// 3. Vídeos Longos (Longa Metragem)
 const videosLongos: VideoItem[] = [
-  { id: 1, titulo: "Longa Metragem 1", videoUrl: "https://www.youtube.com/embed/ID_LONGO_1" },
-  { id: 2, titulo: "Longa Metragem 2", videoUrl: "https://youtu.be/mDHtsP-TdB8" },
-  { id: 3, titulo: "Longa Metragem 3", videoUrl: "https://youtu.be/1w8u7nSSJOE" },
-  { id: 4, titulo: "Longa Metragem 4", videoUrl: "https://www.youtube.com/embed/ID_VIDEO_LONGO_4" },
-  { id: 5, titulo: "Longa Metragem 5", videoUrl: "https://youtu.be/UTC05QLvDMk" },
-  { id: 6, titulo: "Longa Metragem 6", videoUrl: "https://www.youtube.com/embed/ID_VIDEO_LONGO_6" },
-];
-
-// 3. Motion Design
-const videosMotionDesign: VideoItem[] = [
-  { id: 1, titulo: "Motion Design 1", videoUrl: "https://www.youtube.com/embed/ID_VIDEO_MOTION_1" },
-  { id: 2, titulo: "Motion Design 2", videoUrl: "https://www.youtube.com/embed/ID_VIDEO_MOTION_2" },
-  { id: 3, titulo: "Motion Design 3", videoUrl: "https://www.youtube.com/embed/ID_VIDEO_MOTION_3" },
-  { id: 4, titulo: "Motion Design 4", videoUrl: "https://www.youtube.com/embed/ID_VIDEO_MOTION_4" },
-  { id: 5, titulo: "Motion Design 5", videoUrl: "https://www.youtube.com/embed/ID_VIDEO_MOTION_5" },
-  { id: 6, titulo: "Motion Design 6", videoUrl: "https://www.youtube.com/embed/ID_VIDEO_MOTION_6" },
+  { id: 1, titulo: "The Publi Night Show", videoUrl: "https://www.youtube.com/embed/Xdz-JIpMmNA?si=cWX1pBg_LFkcEXUP" },
+  { id: 2, titulo: "YouTube video player", videoUrl: "https://www.youtube.com/embed/py7Ims_tihI?si=4sk56OwRfcbyv5Nu" },
+  { id: 3, titulo: "YouTube video player", videoUrl: "https://www.youtube.com/embed/BOdRR43j96M?si=dgsGN_9tOTKBLP-2" },
+  { id: 4, titulo: "YouTube video player", videoUrl: "https://www.youtube.com/embed/Z27vjEjzDpU?si=fZDeqEI6IgEdiLUw" },
+  { id: 5, titulo: "YouTube video player", videoUrl: "https://www.youtube.com/embed/jtt7TGBn7y4?si=Mr7yY0I2MLgOe0N_" },
+  { id: 6, titulo: "YouTube video player", videoUrl: "https://www.youtube.com/embed/hSDlac4ORSk?si=GrmQl5gHp2RDiYdI" },
+  { id: 7, titulo: "YouTube video player", videoUrl: "https://www.youtube.com/embed/S7xL-YInAuU?si=F5Aa2odOMmExKn78" },
 ];
 
 export default function Portifolio() {
@@ -44,7 +49,7 @@ export default function Portifolio() {
 
   const curtosValidos = videosCurtos.filter((v) => extractYouTubeId(v.videoUrl));
   const longosValidos = videosLongos.filter((v) => extractYouTubeId(v.videoUrl));
-  const motionValidos = videosMotionDesign.filter((v) => extractYouTubeId(v.videoUrl));
+  const aftermoviesRealValidos = aftermoviesRealTime.filter((v) => extractYouTubeId(v.videoUrl));
 
   return (
     <section id="project" className="w-full bg-primary py-14 px-8 md:px-16 flex justify-center">
@@ -79,6 +84,25 @@ export default function Portifolio() {
           </div>
         )}
 
+        {/* Categoria: Aftermovies Real Time */}
+        {aftermoviesRealValidos.length > 0 && (
+          <div>
+            <span className="titan-regular bg-terciary text-white px-4 py-1 font-bold rounded-sm uppercase tracking-wider text-xs md:text-sm inline-block mb-4">
+              {t.portfolio.motionDesign}
+            </span>
+            
+            <Carousel>
+              {aftermoviesRealValidos.map((video) => (
+                <Retangle
+                  key={`motion-${video.id}`}
+                  titulo={video.titulo}
+                  videoUrl={video.videoUrl}
+                />
+              ))}
+            </Carousel>
+          </div>
+        )}
+
         {/* Categoria: Vídeos Longos */}
         {longosValidos.length > 0 && (
           <div>
@@ -90,25 +114,6 @@ export default function Portifolio() {
               {longosValidos.map((video) => (
                 <Retangle
                   key={`longo-${video.id}`}
-                  titulo={video.titulo}
-                  videoUrl={video.videoUrl}
-                />
-              ))}
-            </Carousel>
-          </div>
-        )}
-
-        {/* Confecção da área do motion design */}
-        {motionValidos.length > 0 && (
-          <div>
-            <span className="titan-regular bg-terciary text-white px-4 py-1 font-bold rounded-sm uppercase tracking-wider text-xs md:text-sm inline-block mb-4">
-              {t.portfolio.motionDesign}
-            </span>
-            
-            <Carousel>
-              {motionValidos.map((video) => (
-                <Retangle
-                  key={`motion-${video.id}`}
                   titulo={video.titulo}
                   videoUrl={video.videoUrl}
                 />

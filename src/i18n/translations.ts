@@ -15,9 +15,9 @@ export const translations = {
     },
     hero: {
       bannerAlt: "Banner David Neto",
-      titleLine1: "Story Telling Visual",
-      titleLine2: "Para Ir Além!",
-      subtitleLine1: "Edição de vídeos para criadores que querem",
+      titleLine1: "Storytelling Visual Para Elevar",
+      titleLine2: "o Seu Conteúdo!",
+      subtitleLine1: "Edição e Produção Audiovisual para Criadores que querem",
       subtitleLine2: "transformar boas ideias em conteúdos memoráveis.",
       ctaButton: "Quero fazer um orçamento",
     },
@@ -41,8 +41,8 @@ export const translations = {
       titlePrefix: "Alguns",
       titleHighlight: "Trabalhos",
       shortVideos: "Vídeos Curtos",
+      motionDesign: "Aftermovies Real Time",
       longVideos: "Vídeos Longos",
-      motionDesign: "Motion Design",
       videoPlaceholder: "Vídeo aqui",
       noVideoPlaceholder: "Sem vídeo",
     },
@@ -108,6 +108,7 @@ export const translations = {
       socialTitle: "REDES SOCIAIS",
     },
   },
+
   en: {
     navbar: {
       navAriaLabel: "INSERIR_TEXTO_EM_INGLES", // PT: "Navegação principal"
@@ -122,8 +123,8 @@ export const translations = {
     },
     hero: {
       bannerAlt: "Banner David Neto", // PT: "Banner David Neto"
-      titleLine1: "Visual Storytelling", // PT: "Storytelling Visual"
-      titleLine2: "That Goes Beyond!", // PT: "Para Ir Além!"
+      titleLine1: "Visual Storytelling to Elevate", // PT: "Storytelling Visual"
+      titleLine2: "Your Content!", // PT: "Para Ir Além!"
       subtitleLine1: "Video editing for creators who want to", // PT: "Edição de vídeos para criadores que querem"
       subtitleLine2: "turn good ideas into memorable content.", // PT: "transformar boas ideias em conteúdos memoráveis."
       ctaButton: "Request a Quote", // PT: "Quero fazer um orçamento"
@@ -148,8 +149,8 @@ export const translations = {
       titlePrefix: "Selected", // PT: "Alguns"
       titleHighlight: "Work", // PT: "Trabalhos"
       shortVideos: "Short-Form Videos", // PT: "Vídeos Curtos"
+      motionDesign: "Aftermovies Real Time", // PT: "Aftermovies Real Time"
       longVideos: "Long-Form Videos", // PT: "Vídeos Longos"
-      motionDesign: "Motion Design", // PT: "Motion Design"
       videoPlaceholder: "Vídeo aqui", // PT: "Vídeo aqui"
       noVideoPlaceholder: "No video", // PT: "Sem vídeo"
     },
