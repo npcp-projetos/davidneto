@@ -150,8 +150,9 @@ export const translations = {
       titlePrefix: "Selected", // PT: "Alguns"
       titleHighlight: "Work", // PT: "Trabalhos"
       shortVideos: "Short-Form Videos", // PT: "Vídeos Curtos"
-      motionDesign: "Aftermovies Real Time", // PT: "Aftermovies Real Time"
-      longVideos: "Long-Form Videos", // PT: "Vídeos Longos"
+      aftermovieReal: "Aftermovies Real Time", // PT: "Aftermovies Real Time"
+      projectUni: "Projetos Universitários",
+      aftermovieEvents: "Aftermovies de Eventos",
       videoPlaceholder: "Vídeo aqui", // PT: "Vídeo aqui"
       noVideoPlaceholder: "No video", // PT: "Sem vídeo"
     },
