@@ -118,7 +118,7 @@ export default function Form() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-8 md:gap-y-5 w-full items-end">
         <div className="flex flex-col justify-end gap-1.5 w-full">
-          <label className="text-secundary anton-regular text-sm md:text-base tracking-wide" htmlFor="nome">
+          <label className="text-secundary anton-regular uppercase text-sm md:text-base tracking-wide" htmlFor="nome">
             {t.form.nameLabel}
           </label>
           <input
@@ -131,7 +131,7 @@ export default function Form() {
           />
         </div>
         <div className="flex flex-col justify-end gap-1.5 w-full">
-          <label className="text-secundary anton-regular text-sm md:text-base tracking-wide" htmlFor="social">
+          <label className="text-secundary anton-regular uppercase text-sm md:text-base tracking-wide" htmlFor="social">
             {t.form.socialLabel}
           </label>
           <input
@@ -144,7 +144,7 @@ export default function Form() {
           />
         </div>
         <div className="flex flex-col justify-end gap-1.5 w-full">
-          <label className="text-secundary anton-regular text-sm md:text-base tracking-wide" htmlFor="telefone">
+          <label className="text-secundary anton-regular uppercase text-sm md:text-base tracking-wide" htmlFor="telefone">
             {t.form.phoneLabel}
           </label>
           <input
@@ -163,7 +163,7 @@ export default function Form() {
           />
         </div>
         <div className="flex flex-col justify-end gap-1.5 w-full">
-          <label className="text-secundary anton-regular text-sm md:text-base tracking-wide" htmlFor="conteudo">
+          <label className="text-secundary anton-regular uppercase text-sm md:text-base tracking-wide" htmlFor="conteudo">
             {t.form.contentLabel}
           </label>
           <input
@@ -178,7 +178,7 @@ export default function Form() {
       </div>
 
       <div className="flex flex-col gap-1.5 w-full">
-        <label className="text-secundary anton-regular text-sm md:text-base tracking-wide" htmlFor="projeto">
+        <label className="text-secundary anton-regular uppercase text-sm md:text-base tracking-wide" htmlFor="projeto">
           {t.form.projectLabel}
         </label>
         <textarea
