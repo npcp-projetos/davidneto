@@ -1,9 +1,17 @@
 import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 
+// Substitua pelo código criptografado completo de 32 caracteres enviado pelo FormSubmit
+// ou pelo e-mail direto (ex: "seuemail@gmail.com") para ativar no domínio principal da Vercel.
+const FORMSUBMIT_ENDPOINT = "davidnetocontato@gmail.com";
+
 export default function Form() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [telefone, setTelefone] = useState("");
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  const currentUrl =
+    typeof window !== "undefined" ? window.location.href : "";
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const onlyNumbers = e.target.value.replace(/\D/g, "");
@@ -34,18 +42,62 @@ export default function Form() {
     }
   };
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formElement = e.currentTarget;
+    setStatus("sending");
+
+    try {
+      const formData = new FormData(formElement);
+      const response = await fetch(
+        `https://formsubmit.co/ajax/${FORMSUBMIT_ENDPOINT}`,
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+          },
+          body: formData,
+        }
+      );
+
+      const data = await response.json().catch(() => null);
+
+      if (response.ok && (data?.success === "true" || data?.success === true)) {
+        setStatus("success");
+        setTelefone("");
+        formElement.reset();
+        return;
+      }
+
+      // Caso o domínio ainda precise de ativação inicial no FormSubmit,
+      // faz o envio padrão via POST para exibir a tela de ativação do FormSubmit.
+      formElement.submit();
+    } catch {
+      formElement.submit();
+    }
+  };
+
   return (
     <form
       id="orcamento"
-      action="https://formsubmit.co/6f662a19beb888f908a157d17b91c0"
+      action={`https://formsubmit.co/${FORMSUBMIT_ENDPOINT}`}
       method="POST"
+      onSubmit={handleSubmit}
       className="bg-primary p-6 md:px-10 md:py-8 flex flex-col gap-5 shadow-md w-full rounded-xl"
     >
       {/* Configurações ocultas do FormSubmit.co */}
       <input type="hidden" name="_subject" value="Novo orçamento pelo site!" />
       <input type="hidden" name="_template" value="table" />
-      {/* <input type="hidden" name="_next" value="davidneto-l6fnydqt5-npcp1.vercel.app" /> */}
-      <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
+      <input type="hidden" name="_captcha" value="false" />
+      {currentUrl && <input type="hidden" name="_next" value={currentUrl} />}
+      <input
+        type="text"
+        name="_honey"
+        style={{ display: "none" }}
+        className="hidden"
+        tabIndex={-1}
+        autoComplete="off"
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-8 md:gap-y-5 w-full items-end">
         <div className="flex flex-col justify-end gap-1.5 w-full">
@@ -124,10 +176,23 @@ export default function Form() {
 
       <button
         type="submit"
-        className="w-full py-2.5 px-6 rounded-md bg-terciary text-primary anton-regular uppercase text-base md:text-lg tracking-wider cursor-pointer transition-all duration-300 hover:brightness-105 active:scale-[0.99] focus:outline-none focus:ring-2 focus:ring-secundary focus:ring-offset-2 focus:ring-offset-primary"
+        disabled={status === "sending"}
+        className="w-full py-2.5 px-6 rounded-md bg-terciary text-primary anton-regular uppercase text-base md:text-lg tracking-wider cursor-pointer transition-all duration-300 hover:brightness-105 active:scale-[0.99] disabled:opacity-60 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-secundary focus:ring-offset-2 focus:ring-offset-primary"
       >
-        {t.form.submitButton}
+        {status === "sending"
+          ? language === "pt"
+            ? "ENVIANDO..."
+            : "SENDING..."
+          : t.form.submitButton}
       </button>
+
+      {status === "success" && (
+        <p className="text-terciary font-inter text-sm font-semibold text-center">
+          {language === "pt"
+            ? "Mensagem enviada com sucesso! Em breve entrarei em contato."
+            : "Message sent successfully! I will get back to you soon."}
+        </p>
+      )}
     </form>
   );
 }
