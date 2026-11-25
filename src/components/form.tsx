@@ -2,16 +2,13 @@ import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 
 // Substitua pelo código criptografado completo de 32 caracteres enviado pelo FormSubmit
-// ou pelo e-mail direto (ex: "seuemail@gmail.com") para ativar no domínio principal da Vercel.
+// ou mantenha o e-mail direto (ex: "davidnetocontato@gmail.com").
 const FORMSUBMIT_ENDPOINT = "davidnetocontato@gmail.com";
 
 export default function Form() {
   const { t, language } = useLanguage();
   const [telefone, setTelefone] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
-
-  const currentUrl =
-    typeof window !== "undefined" ? window.location.href : "";
 
   const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const onlyNumbers = e.target.value.replace(/\D/g, "");
@@ -47,33 +44,57 @@ export default function Form() {
     const formElement = e.currentTarget;
     setStatus("sending");
 
+    const formData = new FormData(formElement);
+
+    // Se o campo honeypot antispam estiver preenchido por um bot, ignora silenciosamente
+    if (formData.get("_honey")) {
+      setStatus("success");
+      return;
+    }
+
+    const payload = {
+      "Nome Completo": formData.get("Nome Completo"),
+      "Rede Social": formData.get("Rede Social"),
+      Telefone: formData.get("Telefone"),
+      "Tipo de Conteúdo": formData.get("Tipo de Conteúdo"),
+      "Sobre o Projeto": formData.get("Sobre o Projeto"),
+      _subject: "Novo orçamento pelo site!",
+      _template: "table",
+      _captcha: "false",
+    };
+
     try {
-      const formData = new FormData(formElement);
-      const response = await fetch(
+      // Dispara o envio em segundo plano com keepalive (continua mesmo se a requisição SMTP do FormSubmit demorar)
+      const requestPromise = fetch(
         `https://formsubmit.co/ajax/${FORMSUBMIT_ENDPOINT}`,
         {
           method: "POST",
           headers: {
+            "Content-Type": "application/json",
             Accept: "application/json",
           },
-          body: formData,
+          body: JSON.stringify(payload),
+          keepalive: true,
         }
       );
 
-      const data = await response.json().catch(() => null);
+      // Limita a espera visual do cliente a no máximo 2 segundos enquanto o envio conclui em background
+      const timeoutPromise = new Promise<"timeout">((resolve) =>
+        setTimeout(() => resolve("timeout"), 2000)
+      );
 
-      if (response.ok && (data?.success === "true" || data?.success === true)) {
-        setStatus("success");
-        setTelefone("");
-        formElement.reset();
+      const result = await Promise.race([requestPromise, timeoutPromise]);
+
+      if (result !== "timeout" && !result.ok) {
+        setStatus("error");
         return;
       }
 
-      // Caso o domínio ainda precise de ativação inicial no FormSubmit,
-      // faz o envio padrão via POST para exibir a tela de ativação do FormSubmit.
-      formElement.submit();
+      setStatus("success");
+      setTelefone("");
+      formElement.reset();
     } catch {
-      formElement.submit();
+      setStatus("error");
     }
   };
 
@@ -85,11 +106,7 @@ export default function Form() {
       onSubmit={handleSubmit}
       className="bg-primary p-6 md:px-10 md:py-8 flex flex-col gap-5 shadow-md w-full rounded-xl"
     >
-      {/* Configurações ocultas do FormSubmit.co */}
-      <input type="hidden" name="_subject" value="Novo orçamento pelo site!" />
-      <input type="hidden" name="_template" value="table" />
-      <input type="hidden" name="_captcha" value="false" />
-      {currentUrl && <input type="hidden" name="_next" value={currentUrl} />}
+      {/* Campo Honeypot Antispam Invisível */}
       <input
         type="text"
         name="_honey"
@@ -191,6 +208,14 @@ export default function Form() {
           {language === "pt"
             ? "Mensagem enviada com sucesso! Em breve entrarei em contato."
             : "Message sent successfully! I will get back to you soon."}
+        </p>
+      )}
+
+      {status === "error" && (
+        <p className="text-red-300 font-inter text-sm font-semibold text-center">
+          {language === "pt"
+            ? "Não foi possível enviar no momento. Por favor, tente novamente."
+            : "Could not send right now. Please try again."}
         </p>
       )}
     </form>
